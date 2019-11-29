@@ -52,11 +52,13 @@ setup(
         'Products.GenericSetup>=1.8.2',
         'plone.api>=1.8.4',
         'plone.restapi',
+        'plone.app.contenttypes',
         'plone.app.dexterity',
         'plone.app.referenceablebehavior',
         'plone.app.relationfield',
         'plone.app.lockingbehavior',
         'plone.schema',
+        'requests',
     ],
     extras_require={
         'test': [
