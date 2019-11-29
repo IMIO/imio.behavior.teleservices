@@ -23,5 +23,16 @@
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       class=".controlpanel.ProceduresControlPanelView"
       permission="cmf.ManagePortal"
-      />      
+      />
+
+  <browser:viewlet
+    name="printing_procedures"
+    for="*"
+    manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+    layer="..interfaces.IImioBehaviorTeleservicesLayer"
+    class=".viewlets.print_procedures"
+    template="templates/procedures_viewlet.pt"
+    permission="zope2.View"
+    />
+
 </configure>
