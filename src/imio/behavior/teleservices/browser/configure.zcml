@@ -18,4 +18,10 @@
       directory="static"
       />
 
+  <browser:page
+      name="procedures-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.ProceduresControlPanelView"
+      permission="cmf.ManagePortal"
+      />      
 </configure>
