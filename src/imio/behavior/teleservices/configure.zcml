@@ -40,6 +40,12 @@
       name="imio.behavior.teleservices-hiddenprofiles"
       />
 
+  <utility
+    component=".vocabularies.RemoteProceduresVocabulary"
+    name="imio.behavior.teleservices.vocabularies.remote_procedures"
+    provides="zope.schema.interfaces.IVocabularyFactory"
+    />
+
   <!-- -*- extra stuff goes here -*- -->
 
     <include package=".behaviors" />
