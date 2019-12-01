@@ -27,10 +27,9 @@
 
   <browser:viewlet
     name="printing_procedures"
-    for="*"
+    for="imio.behavior.teleservices.behaviors.ts_procedure.ITsProcedure"
     manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
     layer="..interfaces.IImioBehaviorTeleservicesLayer"
-    class=".viewlets.print_procedures"
     template="templates/procedures_viewlet.pt"
     permission="zope2.View"
     />

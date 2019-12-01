@@ -10,12 +10,9 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
-        name="imio.behavior.teleservices.ts_procedure"
-        title="TsProcedure"
+        title="Ts Procedure"
         description="Teleservices procedures"
         provides=".ts_procedure.ITsProcedure"
-        factory=".ts_procedure.TsProcedure"
-        marker=".ts_procedure.ITsProcedureMarker"
         />
 
 

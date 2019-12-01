@@ -1,3 +1,7 @@
-<div class="procedures">
-    Here : Choice field with list of procedures from E-Guichet !!
+<div class="procedures"
+     tal:define="url context/procedures"
+     tal:condition="url">
+    <a href=""
+       tal:attributes="href url"
+       tal:content="url" />
 </div>
