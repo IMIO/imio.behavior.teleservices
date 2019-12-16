@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+from plone.dexterity.interfaces import IDexterityFTI
+from zope.component import queryUtility
+
 import base64
 import datetime
 import hashlib
@@ -35,3 +38,14 @@ def sign_string(s, key, algo="sha256", timedelta=30):
     digestmod = getattr(hashlib, algo)
     hash = hmac.HMAC(key, digestmod=digestmod, msg=s)
     return hash.digest()
+
+
+def add_behavior(type_name, behavior_name):
+    """Add a behavior to a type"""
+    fti = queryUtility(IDexterityFTI, name=type_name)
+    if not fti:
+        return
+    behaviors = list(fti.behaviors)
+    if behavior_name not in behaviors:
+        behaviors.append(behavior_name)
+        fti._updateProperty("behaviors", tuple(behaviors))
