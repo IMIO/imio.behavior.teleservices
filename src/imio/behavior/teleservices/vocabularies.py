@@ -21,7 +21,11 @@ class RemoteProceduresVocabularyFactory:
         if not url:
             return SimpleVocabulary([])
         query_full = sign_url(url, key, orig)
-        response = requests.get(query_full)
+        try:
+            response = requests.get(query_full)
+        except Exception:
+            return SimpleVocabulary([])
+
         if response.status_code != 200:
             return SimpleVocabulary([])
 
