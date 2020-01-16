@@ -21,7 +21,6 @@ class SelectProcedureWidget(SelectWidget):
         super(SelectProcedureWidget, self).update()
 
     def render(self):
-        # import ipdb;ipdb.set_trace()
         url = api.portal.get_registry_record("procedures.url_formdefs_api")
         if not url or url == "":
             return self.noconfig_template(self)
