@@ -25,13 +25,20 @@
       permission="cmf.ManagePortal"
       />
 
-  <browser:viewlet
-    name="printing_procedures"
-    for="imio.behavior.teleservices.behaviors.ts_procedure.ITsProcedure"
-    manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
-    layer="..interfaces.IImioBehaviorTeleservicesLayer"
-    template="templates/procedures_viewlet.pt"
-    permission="zope2.View"
-    />
+   <browser:page
+        for="imio.behavior.teleservices.behaviors.ts_procedure.ITsProcedure"
+        name="view"
+        class=".ts_procedure.ProcedureDisplay"
+        permission="zope2.View"
+        />
 
+  <!--browser:viewlet
+      name="printing_procedures"
+      for="imio.behavior.teleservices.behaviors.ts_procedure.ITsProcedure"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+      layer="..interfaces.IImioBehaviorTeleservicesLayer"
+      template="templates/procedures_viewlet.pt"
+      class=".procedures_viewlet.ProceduresViewlet"
+      permission="zope2.View"
+  /-->
 </configure>
