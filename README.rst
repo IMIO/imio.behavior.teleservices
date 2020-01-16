@@ -17,9 +17,10 @@ Features
 
 Examples
 --------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
+    Get procedures from e-guichet API :
+        https://COMMUNE-formulaires.guichet-citoyen.be/api/formdefs/
+    Find procedures in website :
+        http://localhost:8080/COMMUNE/ma-commune/services-communaux/accueil/demarches
 
 
 Documentation
