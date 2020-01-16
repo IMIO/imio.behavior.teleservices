@@ -10,10 +10,8 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
-        title="Ts Procedure"
-        description="Teleservices procedures"
+        title="Teleservices procedures"
+        description="Install a select box to link an iA.TS procedure with a content type"
         provides=".ts_procedure.ITsProcedure"
         />
-
-
 </configure>
