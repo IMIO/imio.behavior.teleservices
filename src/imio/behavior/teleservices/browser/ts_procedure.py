@@ -1,17 +1,13 @@
+from imio.behavior.teleservices.widgets import ISelectProcedureWidget
 from plone.dexterity.browser.view import DefaultView
-
-import z3c.form
-
-
-# from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
 class ProcedureDisplay(DefaultView):
 
-    template = "templates/item.pt"
-
     def updateWidgets(self):
         super(ProcedureDisplay, self).updateWidgets()
-        for widget in self.widgets.values():
-            if not widget.value:
-                widget.mode = z3c.form.interfaces.HIDDEN_MODE
+        # Remove our widget if empty (otherwise we see label without value)
+        for name, widget in self.widgets.items():
+            if not ISelectProcedureWidget.providedBy(widget) or widget.value:
+                continue
+            del self.widgets[name]

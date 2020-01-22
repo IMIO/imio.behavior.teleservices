@@ -15,10 +15,7 @@ class ISelectProcedureWidget(ISelectWidget):
 class SelectProcedureWidget(SelectWidget):
     noconfig_template = ViewPageTemplateFile("browser/templates/no_config.pt")
     badconfig_template = ViewPageTemplateFile("browser/templates/bad_config.pt")
-    display = ViewPageTemplateFile('browser/templates/select_display.pt')
-
-    def update(self):
-        super(SelectProcedureWidget, self).update()
+    display_template = ViewPageTemplateFile("browser/templates/select_display.pt")
 
     def render(self):
         url = api.portal.get_registry_record("procedures.url_formdefs_api")
@@ -26,11 +23,8 @@ class SelectProcedureWidget(SelectWidget):
             return self.noconfig_template(self)
         elif self.items is not None and len(self.items) <= 1:
             return self.badconfig_template(self)
-        else:
-            return self.display(self)
-            # return super(SelectProcedureWidget, self).render()
 
+        if self.mode == "display":
+            return self.display_template(self)
 
-# from z3c.form.interfaces import NOVALUE
-# self.extract() == NOVALUE
-# this is True if we can choose a NOVALUE items in select =>
+        return super(SelectProcedureWidget, self).render()

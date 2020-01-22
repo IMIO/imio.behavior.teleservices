@@ -20,12 +20,3 @@ class ITsProcedure(model.Schema):
         required=False,
         default=None
     )
-
-# import z3c.form
-# from plone.directives import dexterityclass
-# MyCustomView(dexterity.DisplayForm):
-#    def updateWidgets(self):
-#         super(MyCustomView, self).updateWidgets()
-#         for widget in self.widgets.values():
-#             if not widget.value:
-#                 widget.mode = z3c.form.interfaces.HIDDEN_MODE

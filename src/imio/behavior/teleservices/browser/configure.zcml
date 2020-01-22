@@ -25,12 +25,15 @@
       permission="cmf.ManagePortal"
       />
 
-   <browser:page
+  <configure package="plone.dexterity.browser">
+    <browser:page
         for="imio.behavior.teleservices.behaviors.ts_procedure.ITsProcedure"
         name="view"
-        class=".ts_procedure.ProcedureDisplay"
+        class="imio.behavior.teleservices.browser.ts_procedure.ProcedureDisplay"
+        template="item.pt"
         permission="zope2.View"
         />
+  </configure>
 
   <!--browser:viewlet
       name="printing_procedures"
