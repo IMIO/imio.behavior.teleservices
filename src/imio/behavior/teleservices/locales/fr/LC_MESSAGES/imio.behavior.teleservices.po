@@ -1,6 +1,3 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -15,31 +12,31 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: imio.behavior.teleservices\n"
+"Domain: DOMAIN\n"
 
 #: ../behaviors/ts_procedure.py:19
 msgid "E-Guichet procedures"
-msgstr ""
+msgstr "Démarche en ligne"
 
 #: ../configure.zcml:27
 msgid "Installs the imio.behavior.teleservices add-on."
-msgstr ""
+msgstr "Installer le behavior pour réaliser la liaison avec les démarches de votre e-guichet."
 
 #: ../browser/controlpanel.py:22
 msgid "Secret key"
-msgstr ""
+msgstr "Clé secrète"
 
 #: ../browser/controlpanel.py:22
 msgid "Secret key to use API"
-msgstr ""
+msgstr "La clé secrète partagée entre le guichet et le site pour pouvoir communiquer avec l'API."
 
 #: ../configure.zcml:36
 msgid "Uninstalls the imio.behavior.teleservices add-on."
-msgstr ""
+msgstr "Désinstaller le produit imio.behavior.teleservices"
 
 #: ../browser/controlpanel.py:14
 msgid "Url to get forms from your e-guichet"
-msgstr ""
+msgstr "Lien vers l'API qui permet la récupération des formulaires de votre e-guichet"
 
 #: ../configure.zcml:27
 msgid "imio.behavior.teleservices"
@@ -47,9 +44,4 @@ msgstr ""
 
 #: ../configure.zcml:36
 msgid "imio.behavior.teleservices (uninstall)"
-msgstr ""
-
-#: ../browser/controlpanel.py:15
-msgid "url to get forms from your e-guichet. 
- (Seems like : https://COMMUNE-formulaires.guichet-citoyen.be/api/formdefs/)"
 msgstr ""
