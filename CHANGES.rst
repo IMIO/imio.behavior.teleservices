@@ -5,7 +5,8 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- update locales
+  [boulch]
 
 
 1.0 (2020-07-01)
