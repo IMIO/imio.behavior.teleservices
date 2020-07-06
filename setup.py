@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='imio.behavior.teleservices',
-    version='1.0.1',
+    version='1.0.2.dev0',
     description="Plone behavior to get (and set) global E-Guichet/Teleservices configuration into a Plone Application. Expose E-Guichet procedures in a select field.",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
