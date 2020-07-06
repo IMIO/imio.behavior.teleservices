@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.1 (unreleased)
+1.0.1 (2020-07-06)
 ------------------
 
 - Transform SelectProcedureWidget to a SingleSelect2Widget to get filter text widget on a choice field.
