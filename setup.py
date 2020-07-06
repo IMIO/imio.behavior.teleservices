@@ -48,6 +48,7 @@ setup(
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-
+        'collective.z3cform.select2',
         'z3c.jbot',
         'Products.GenericSetup>=1.8.2',
         'plone.api>=1.8.4',
