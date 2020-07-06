@@ -2,17 +2,17 @@
 
 from plone import api
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from z3c.form.browser.select import SelectWidget
-from z3c.form.interfaces import ISelectWidget
 from zope.interface import implementer
+from collective.z3cform.select2.widget.widget import ISingleSelect2Widget
+from collective.z3cform.select2.widget.widget import SingleSelect2Widget
 
 
-class ISelectProcedureWidget(ISelectWidget):
+class ISelectProcedureWidget(ISingleSelect2Widget):
     """Marker interface for the SelectProcedureWidget"""
 
 
 @implementer(ISelectProcedureWidget)
-class SelectProcedureWidget(SelectWidget):
+class SelectProcedureWidget(SingleSelect2Widget):
     noconfig_template = ViewPageTemplateFile("browser/templates/no_config.pt")
     badconfig_template = ViewPageTemplateFile("browser/templates/bad_config.pt")
     display_template = ViewPageTemplateFile("browser/templates/select_display.pt")
