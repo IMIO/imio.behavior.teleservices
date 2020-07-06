@@ -5,6 +5,7 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
+- Transform SelectProcedureWidget to a SingleSelect2Widget
 - update locales
   [boulch]
 
