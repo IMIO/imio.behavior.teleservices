@@ -16,7 +16,7 @@ msgstr ""
 
 #: ../behaviors/ts_procedure.py:19
 msgid "E-Guichet procedures"
-msgstr "Démarche en ligne"
+msgstr "Lien vers la démarche en ligne"
 
 #: ../configure.zcml:27
 msgid "Installs the imio.behavior.teleservices add-on."
