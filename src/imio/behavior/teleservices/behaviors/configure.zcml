@@ -13,5 +13,7 @@
         title="Teleservices procedures"
         description="Install a select box to link an iA.TS procedure with a content type"
         provides=".ts_procedure.ITsProcedure"
+        for="cpskin.contenttypes.content.procedure.IProcedure"
+        marker=".ts_procedure.ITsProcedure"
         />
 </configure>

@@ -5,7 +5,8 @@ Changelog
 1.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- [WEB-3405] : Add behavior marker interface.
+  [boulch]
 
 
 1.0.2 (2020-07-07)
