@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.4 (unreleased)
+1.0.4 (2021-05-17)
 ------------------
 
 - Remove useless browser view
