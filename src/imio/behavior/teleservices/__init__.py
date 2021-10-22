@@ -3,4 +3,4 @@
 from zope.i18nmessageid import MessageFactory
 
 
-_ = MessageFactory('imio.behavior.teleservices')
+_ = MessageFactory("imio.behavior.teleservices")

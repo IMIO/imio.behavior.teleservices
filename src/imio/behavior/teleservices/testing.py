@@ -19,13 +19,15 @@ class ImioBehaviorTeleservicesLayer(PloneSandboxLayer):
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
         import plone.app.dexterity
+
         self.loadZCML(package=plone.app.dexterity)
         import plone.restapi
+
         self.loadZCML(package=plone.restapi)
         self.loadZCML(package=imio.behavior.teleservices)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'imio.behavior.teleservices:default')
+        applyProfile(portal, "imio.behavior.teleservices:default")
 
 
 IMIO_BEHAVIOR_TELESERVICES_FIXTURE = ImioBehaviorTeleservicesLayer()
@@ -33,13 +35,13 @@ IMIO_BEHAVIOR_TELESERVICES_FIXTURE = ImioBehaviorTeleservicesLayer()
 
 IMIO_BEHAVIOR_TELESERVICES_INTEGRATION_TESTING = IntegrationTesting(
     bases=(IMIO_BEHAVIOR_TELESERVICES_FIXTURE,),
-    name='ImioBehaviorTeleservicesLayer:IntegrationTesting',
+    name="ImioBehaviorTeleservicesLayer:IntegrationTesting",
 )
 
 
 IMIO_BEHAVIOR_TELESERVICES_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(IMIO_BEHAVIOR_TELESERVICES_FIXTURE,),
-    name='ImioBehaviorTeleservicesLayer:FunctionalTesting',
+    name="ImioBehaviorTeleservicesLayer:FunctionalTesting",
 )
 
 
@@ -49,5 +51,5 @@ IMIO_BEHAVIOR_TELESERVICES_ACCEPTANCE_TESTING = FunctionalTesting(
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE,
     ),
-    name='ImioBehaviorTeleservicesLayer:AcceptanceTesting',
+    name="ImioBehaviorTeleservicesLayer:AcceptanceTesting",
 )

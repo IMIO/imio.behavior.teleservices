@@ -11,12 +11,12 @@ from zope.interface import provider
 
 @provider(IFormFieldProvider)
 class ITsProcedure(model.Schema):
-    """
-    """
+    """ """
+
     directives.widget("procedures", SelectProcedureWidget)
     procedures = schema.Choice(
         vocabulary="imio.behavior.teleservices.vocabularies.remote_procedures",
         title=_(u"E-Guichet procedures"),
         required=False,
-        default=None
+        default=None,
     )
