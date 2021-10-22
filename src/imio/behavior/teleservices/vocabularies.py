@@ -3,12 +3,9 @@
 from plone import api
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
+import base64
 import json
 import requests
-
-# from imio.behavior.teleservices.config import API_HEADERS
-# from imio.behavior.teleservices.utils import get_api_url_for_meetings
-from imio.behavior.teleservices.utils import sign_url
 
 
 class RemoteProceduresVocabularyFactory:
@@ -20,9 +17,17 @@ class RemoteProceduresVocabularyFactory:
         orig = "ia.smartweb"
         if not url:
             return SimpleVocabulary([])
-        query_full = sign_url(url, key, orig)
+        auth = "{}:{}".format(orig, key)
+        b64val = base64.b64encode(auth.encode()).decode()
+        headers = {
+            "Accept": "application/json",
+            "Authorization": "Basic {}".format(b64val),
+        }
+        payload = {}
         try:
-            response = requests.get(query_full)
+            response = requests.request(
+                "GET", url, headers=headers, data=payload, verify=False
+            )
         except Exception:
             return SimpleVocabulary([])
 

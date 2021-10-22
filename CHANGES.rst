@@ -5,7 +5,8 @@ Changelog
 1.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix query and authentication to get procedures from ia.teleservices.
+  [boulch]
 
 
 1.0.4 (2021-05-17)
