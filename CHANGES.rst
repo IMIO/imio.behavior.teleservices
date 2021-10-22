@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.5 (unreleased)
+1.0.5 (2021-10-22)
 ------------------
 
 - Fix query and authentication to get procedures from ia.teleservices.
